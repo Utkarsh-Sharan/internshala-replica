@@ -1,8 +1,8 @@
 import { Filter } from 'lucide-react';
-import { useFilterStore } from '../../../store/useFilterStore.js';
+import { useInternshipStore } from '../../../store/useInternshipStore.js';
 
 const FilterMobile = () => {
-  const {toggleFilterModal} = useFilterStore();
+  const {toggleFilterModal} = useInternshipStore();
 
   return (
     <section className='md:hidden flex justify-start items-center gap-2 overflow-x-auto'>
