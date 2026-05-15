@@ -4,7 +4,8 @@ import ReactImg from "../../assets/react.svg";
 const InternshipCard = ({data}) => {
   return (
     <article className='w-full rounded-lg border border-gray-300 shadow-md p-2 flex 
-      flex-col items-start gap-4 cursor-pointer'>
+      flex-col items-start gap-4 cursor-pointer transform transition-transform duration-200
+      ease-in-out hover:scale-105 hover:shadow-lg'>
       <article className='flex w-full justify-between items-center'>
           <div className='text-base'>
               <p className='font-semibold'>{data.title}</p>
