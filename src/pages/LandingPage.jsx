@@ -1,10 +1,12 @@
+import Hero from '../components/Hero/Hero.jsx'
 import Navbar from '../components/Navbar/Navbar.jsx'
 
 const LandingPage = () => {
   return (
-    <Navbar />
-
-    
+    <>
+        <Navbar />
+        <Hero />
+    </>
   )
 }
 
