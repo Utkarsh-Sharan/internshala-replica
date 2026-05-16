@@ -1,3 +1,4 @@
+import Footer from '../components/Footer/Footer.jsx'
 import Hero from '../components/Hero/Hero.jsx'
 import Navbar from '../components/Navbar/Navbar.jsx'
 
@@ -6,6 +7,7 @@ const LandingPage = () => {
     <>
         <Navbar />
         <Hero />
+        <Footer />
     </>
   )
 }
