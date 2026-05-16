@@ -22,8 +22,10 @@ const Hero = () => {
         <Breadcrumb />
 
         <div className='mt-5 md:grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4 items-start'>
-          <FilterDesktop className="hidden md:visible" />
-          <FilterMobile className="visible md:hidden mt-5" />  
+          <div className="hidden md:block md:sticky top-5">
+            <FilterDesktop />
+          </div>
+          <FilterMobile className="block md:hidden mt-5" />  
           <InternshipList data={internshipData} />
         </div>
 
