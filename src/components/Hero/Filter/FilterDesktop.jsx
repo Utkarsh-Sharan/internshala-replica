@@ -2,6 +2,7 @@ import { Filter } from "lucide-react"
 import InputField from "../../Input/InputField"
 import InputRange from "../../Input/InputRange"
 import { useState } from "react"
+import { useInternshipStore } from "../../../store/useInternshipStore"
 
 const FilterDesktop = () => {
   const [filterData, setFilterData] = useState({
@@ -10,13 +11,14 @@ const FilterDesktop = () => {
     stipendRange: "",
     duration: [],
   });
+  const {setFilters} = useInternshipStore();
 
   const handleChange = (key, value) => {
     setFilterData((prev) => ({...prev, [key]: value}));
   }
 
   const handleSubmit = () => {
-    
+    setFilters(filterData);
   }
 
   return (
@@ -54,7 +56,12 @@ const FilterDesktop = () => {
 
       <article className='flex w-full justify-end items-center gap-4 pt-4'>
         <button className='text-blue-500'>Clear All</button>
-        <button className='bg-blue-500 text-white rounded-md px-2 py-1'>Apply</button>
+        <button 
+          className='bg-blue-500 text-white rounded-md px-2 py-1'
+          onClick={handleSubmit}
+        >
+          Apply
+        </button>
       </article>
     </section>
   )

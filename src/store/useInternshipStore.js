@@ -3,10 +3,15 @@ import axios from "axios";
 
 export const useInternshipStore = create((set, get) => ({
     internshipData: {},
+    filters: {},
     isFilterModalVisible: false,
 
     toggleFilterModal: (value) => {
         set({isFilterModalVisible: value});
+    },
+
+    setFilters: (data) => {
+        set({filters: data});
     },
 
     fetchAllInternships: async () => {
