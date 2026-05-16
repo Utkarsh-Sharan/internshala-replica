@@ -7,7 +7,7 @@ const InternshipList = ({data}) => {
         <p className="font-medium text-gray-400">Latest Summer Internships in India</p>
 
         {Object.values(data).map((internship) => (
-            <InternshipCard data={internship} />
+            <InternshipCard key={internship.id} data={internship} />
         ))}
     </section>
   )

@@ -1,4 +1,8 @@
-const InputRange = () => {
+const InputRange = ({value, onChange}) => {
+  const handleRange = (e) => {
+    onChange("stipendRange", e.target.value);
+  }
+
   return (
     <article className="flex flex-col justify-center items-start">
             <label htmlFor="range">Desired minimum monthly stipend {"(₹)"}</label>
@@ -8,6 +12,8 @@ const InputRange = () => {
                 id="range"
                 min={0}
                 max={5}
+                value={value}
+                onChange={handleRange}
                 className="w-full"
             />
 
@@ -17,7 +23,7 @@ const InputRange = () => {
                 <span>4K</span>
                 <span>6K</span>
                 <span>8K</span>
-                <span>10K</span>
+                <span>10K+</span>
             </div>
         </article>
   )
