@@ -11,7 +11,7 @@ const FilterDesktop = () => {
     stipendRange: "",
     duration: [],
   });
-  const {setFilters} = useInternshipStore();
+  const {setFilters, toggleFilterModal} = useInternshipStore();
 
   const handleChange = (key, value) => {
     setFilterData((prev) => ({...prev, [key]: value}));
@@ -26,10 +26,12 @@ const FilterDesktop = () => {
     });
     
     setFilters({});
+    toggleFilterModal(false);
   }
 
   const handleSubmit = () => {
     setFilters(filterData);
+    toggleFilterModal(false);
   }
 
   return (

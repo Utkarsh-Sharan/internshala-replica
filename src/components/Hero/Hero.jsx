@@ -25,7 +25,7 @@ const Hero = () => {
           <div className="hidden md:block md:sticky top-5">
             <FilterDesktop />
           </div>
-          <FilterMobile className="block md:hidden mt-5" />  
+          <FilterMobile className="block md:hidden" />  
           <InternshipList data={internshipData} />
         </div>
 
