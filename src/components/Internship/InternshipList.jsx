@@ -23,14 +23,14 @@ const InternshipList = ({data}) => {
 
   const {filters} = useInternshipStore();
   const dataArray = Object.values(data);
-  const filteredDataArray = applyFilters(dataArray, filters);
+  // const filteredDataArray = applyFilters(dataArray, filters);
 
   return (
     <section className="flex flex-col justify-center items-center gap-4">
-      <h3 className="font-bold text-3xl">{filteredDataArray.length} Total Internships</h3>
+      <h3 className="font-bold text-3xl">{dataArray.length} Total Internships</h3>
       <p className="font-medium text-gray-400">Latest Summer Internships in India</p>
 
-      {filteredDataArray.map((internship) => (
+      {dataArray.map((internship) => (
         <InternshipCard key={internship.id} data={internship} />
       ))}
     </section>
