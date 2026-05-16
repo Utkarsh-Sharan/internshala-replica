@@ -17,6 +17,17 @@ const FilterDesktop = () => {
     setFilterData((prev) => ({...prev, [key]: value}));
   }
 
+  const handleClear = () => {
+    setFilterData({
+      profile: [],
+      location: [],
+      stipendRange: "",
+      duration: [],
+    });
+    
+    setFilters({});
+  }
+
   const handleSubmit = () => {
     setFilters(filterData);
   }
@@ -34,13 +45,13 @@ const FilterDesktop = () => {
           label={"profile"}
           value={filterData.profile}
           onChange={handleChange}
-          options={["Marketing", "Computer Science"]}
+          options={["Administration", "Android App Development", "Product Management", "Brand Management", "Business Analytics", "Data Science"]}
         />
         <InputField 
           label={"location"}
           value={filterData.location}
           onChange={handleChange}
-          options={["Delhi", "Bangalore", "Mumbai"]}
+          options={["Banga (Philippines)", "Delhi", "Gurgaon", "Tarn Taran", "Munnar"]}
         />
         <InputRange 
           value={filterData.stipendRange}
@@ -50,12 +61,17 @@ const FilterDesktop = () => {
           label={"duration"} 
           value={filterData.duration}
           onChange={handleChange}
-          options={["2 months", "3 months", "4 months"]}
+          options={["2 Months", "3 Months", "4 Months", "5 Months"]}
         />
       </section>
 
       <article className='flex w-full justify-end items-center gap-4 pt-4'>
-        <button className='text-blue-500'>Clear All</button>
+        <button 
+          className='text-blue-500'
+          onClick={handleClear}
+        >
+          Clear All
+        </button>
         <button 
           className='bg-blue-500 text-white rounded-md px-2 py-1'
           onClick={handleSubmit}

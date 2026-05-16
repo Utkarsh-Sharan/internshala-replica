@@ -18,7 +18,7 @@ const InputField = ({label, value, onChange, options}) => {
               checked={value.includes(option)}
               onChange={() => toggleOption(option)}
             />
-            {option}
+            <p className="text-sm">{option}</p>
           </label>
         ))}
       </div>
