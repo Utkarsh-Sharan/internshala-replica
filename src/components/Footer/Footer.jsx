@@ -45,7 +45,7 @@ const Footer = () => {
 
         <article className="mt-5 flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-col md:flex-row justify-between items-center gap-5">
-                <div className="flex justify-start items-center gap-2">
+                <div className="flex flex-col sm:flex-row justify-start items-center gap-2">
                     <img src={getItOnGooglePlay} alt="" width={150} />
                     <img src={downloadFromAppStore} alt="" width={150} />
                 </div>

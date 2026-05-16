@@ -16,7 +16,8 @@ const InternshipCard = ({data}) => {
           <img src={ReactImg} alt="company-logo" />
       </article>
 
-      <article className='flex justify-center gap-4 text-sm'>
+      <article className='flex flex-col sm:flex-row w-full justify-center sm:justify-start 
+      gap-4 text-sm'>
         <div className='flex justify-center items-center gap-1'>
           <MapPin size={15} />
           {data.location_names[0]}
@@ -35,7 +36,7 @@ const InternshipCard = ({data}) => {
 
       <article className='flex justify-center items-center gap-2 text-sm'>
         <Rows4 size={15} />
-        <p className='truncate w-80'>In the delicate dance between strategy and sentiment, 
+        <p className='truncate w-44 sm:w-60 md:w-80'>In the delicate dance between strategy and sentiment, 
           a true changemaker must master both logic and longing.
         </p>
       </article>
