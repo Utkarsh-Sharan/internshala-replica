@@ -7,7 +7,7 @@ const FaqItem = ({question, answer}) => {
     <article className='border-b border-gray-200'>
         <button
             onClick={() => setIsOpen(prev => !prev)}
-            className='w-full flex justify-between items-center py-4'
+            className='w-full flex justify-between items-center px-2 py-4'
         >
             <span className='font-medium text-gray-800'>{question}</span>
             <span className='ml-2 text-gray-500'>{isOpen ? "-" : "+"}</span>
