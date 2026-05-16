@@ -21,7 +21,7 @@ const Hero = () => {
       <section className='w-3/4'>
         <Breadcrumb />
 
-        <div className='mt-5 md:grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4 items-start'>
+        <div className='mt-5 md:grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-5 items-start'>
           <div className="hidden md:block md:sticky top-5">
             <FilterDesktop />
           </div>

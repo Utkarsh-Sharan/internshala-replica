@@ -1,18 +1,20 @@
 import { ChevronDown, Menu } from "lucide-react"
 import { useState } from "react"
+import {intershalaLogo} from "../../utils/constants.js";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <section className='px-10 md:px-20 py-7 flex justify-start md:justify-between items-center border-b-2 shadow-sm sticky'>
+    <section className='px-10 md:px-20 py-7 flex justify-start md:justify-between 
+    items-center border-b-2 shadow-sm sticky bg-white'>
         <button
             className="md:hidden pr-4"
             onClick={() => setOpen(prev => !prev)}
         >
             <Menu />
         </button>
-        <h3>Internshala</h3>
+        <img src={intershalaLogo} alt="intershala-logo" width={100} />
 
         <article className='hidden md:flex justify-center items-center gap-7'>
             <div className="flex justify-center items-center gap-2 cursor-pointer">
