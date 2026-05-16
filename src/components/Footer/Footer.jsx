@@ -10,7 +10,7 @@ import {
 const Footer = () => {
   return (
     <footer className='bg-gray-900 text-white text-sm mt-5 px-10 py-5'>
-        <article className='flex justify-around items-start'>
+        <article className='flex flex-col md:flex-row justify-around items-start'>
             <div className='flex flex-col items-start justify-start gap-2'>
                 <p>About us</p>
                 <p>We're hiring</p>
@@ -43,9 +43,9 @@ const Footer = () => {
             </div>
         </article>
 
-        <article className="mt-5 flex justify-between items-center">
-            <div className="flex justify-between items-center gap-5">
-                <div className="flex justify-start items-center gap-2">
+        <article className="mt-5 flex flex-col md:flex-row justify-between items-center">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-5">
+                <div className="flex flex-col sm:flex-row justify-start items-center gap-2">
                     <img src={getItOnGooglePlay} alt="" width={150} />
                     <img src={downloadFromAppStore} alt="" width={150} />
                 </div>
@@ -57,7 +57,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div>
+            <div className="mt-5">
                 <p>© Copyright 2026 Internshala</p>
                 <p>{"(Scholiverse Educare Private Limited)"}</p>
             </div>

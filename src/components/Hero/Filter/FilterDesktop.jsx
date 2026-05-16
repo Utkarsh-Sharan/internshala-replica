@@ -11,7 +11,7 @@ const FilterDesktop = () => {
     stipendRange: "",
     duration: [],
   });
-  const {setFilters} = useInternshipStore();
+  const {setFilters, toggleFilterModal} = useInternshipStore();
 
   const handleChange = (key, value) => {
     setFilterData((prev) => ({...prev, [key]: value}));
@@ -26,15 +26,17 @@ const FilterDesktop = () => {
     });
     
     setFilters({});
+    toggleFilterModal(false);
   }
 
   const handleSubmit = () => {
     setFilters(filterData);
+    toggleFilterModal(false);
   }
 
   return (
     <section className="px-2 py-4 flex flex-col justify-center items-center gap-5 
-      border border-gray-300 bg-white md:shadow-md rounded-md md:sticky top-5 h-fit">
+      border border-gray-300 bg-white md:shadow-md rounded-md">
       <div className="flex justify-center items-center gap-2">
         <Filter />
         <h3>Filters</h3>
